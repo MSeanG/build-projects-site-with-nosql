@@ -1,4 +1,3 @@
-require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -8,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var index = require('./routes/index');
 var users = require('./routes/users');
+require('dotenv').config();
 
 var app = express();
 mongoose.connect(process.env.MONGODB_URI);
